@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RestDeliveryApp</string>
+    <string name="search_title">Buscador</string>
+    <string name="search_hint">Escriba aqui para buscar sus platos</string>
+</resources>
