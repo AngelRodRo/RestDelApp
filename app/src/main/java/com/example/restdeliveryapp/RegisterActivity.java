@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText edtPassword;
     EditText edtEmail;
 
-    OkHttpRequest okHttpRequest;
+//    OkHttpRequest okHttpRequest;
     Meteor mMeteor;
     Context ctx;
 

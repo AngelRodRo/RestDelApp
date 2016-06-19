@@ -1,6 +1,8 @@
 package com.example.restdeliveryapp;
 
 import android.app.Application;
+import android.util.Log;
+import android.widget.Toast;
 
 import im.delight.android.ddp.Meteor;
 import im.delight.android.ddp.MeteorCallback;
@@ -47,7 +49,7 @@ public class App extends Application implements MeteorCallback {
 
     @Override
     public void onConnect(boolean signedInAutomatically) {
-
+        Toast.makeText(this,""+signedInAutomatically,Toast.LENGTH_LONG).show();
     }
 
     @Override
