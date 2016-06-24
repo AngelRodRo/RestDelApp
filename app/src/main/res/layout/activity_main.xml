@@ -19,11 +19,20 @@
         <include
             android:id="@+id/tool_bar"
             layout="@layout/tool_bar"
-        >
+            />
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/lvDishes"
             android:layout_alignParentTop="true" />
     </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#ffffff"
+        android:scrollbars="vertical">
+     </android.support.v7.widget.RecyclerView>
 </android.support.v4.widget.DrawerLayout>

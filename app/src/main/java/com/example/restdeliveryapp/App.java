@@ -6,30 +6,42 @@ import android.widget.Toast;
 
 import im.delight.android.ddp.Meteor;
 import im.delight.android.ddp.MeteorCallback;
+import im.delight.android.ddp.MeteorSingleton;
 import im.delight.android.ddp.db.memory.InMemoryDatabase;
 
 /**
  * Created by angel on 17/06/16.
  */
-public class App extends Application implements MeteorCallback {
+public class App extends Application implements MeteorCallback{
 
-    private static Meteor mMeteor;
+//    private static Meteor mMeteor;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mMeteor = new Meteor(this, "ws://0.0.0.0:3000/websocket",new InMemoryDatabase());
 
-        // register the callback that will handle events and receive messages
-        mMeteor.addCallback(this);
+        MeteorSingleton.createInstance(this, "ws://172.20.20.31:3000/websocket");
+        MeteorSingleton.setLoggingEnabled(true);
+        MeteorSingleton.getInstance().addCallback(this);
+        MeteorSingleton.getInstance().connect();
 
-        // establish the connection
-        mMeteor.connect();
+
+//        mMeteor = MeteorSingleton.createInstance(this, "ws://0.0.0.0:3000/websocket");
+//
+//
+////        mMeteor = new Meteor(this, "ws://0.0.0.0:3000/websocket",new InMemoryDatabase());
+//
+////         register the callback that will handle events and receive messages
+//        mMeteor.addCallback(this);
+//
+////         establish the connection
+//        mMeteor.connect();
 
     }
 
-    public static Meteor getInstance(){
-        return mMeteor;
+    @Override
+    public void onDataChanged(String collectionName, String documentID, String updatedValuesJson, String removedValuesJson) {
+
     }
 
     @Override
@@ -43,23 +55,18 @@ public class App extends Application implements MeteorCallback {
     }
 
     @Override
-    public void onDataChanged(String collectionName, String documentID, String updatedValuesJson, String removedValuesJson) {
+    public void onDisconnect() {
 
-    }
-
-    @Override
-    public void onConnect(boolean signedInAutomatically) {
-        Toast.makeText(this,""+signedInAutomatically,Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onException(Exception e) {
-
+        Log.e("Exception",e.toString());
     }
 
     @Override
-    public void onDisconnect() {
-
+    public void onConnect(boolean signedInAutomatically) {
+        Log.i("Conectado",""+signedInAutomatically);
     }
 
 }

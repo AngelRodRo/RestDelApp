@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvDishes;
     ListResultAdapter adapter;
     ArrayList<Dish> listDishes;
-
+    String TITLES[] = {"Inicio","Ultimos pedidos","Favoritos","Ayuda"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

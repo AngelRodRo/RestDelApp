@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mMeteor = App.getInstance();
+//        mMeteor = App.getInstance();
         ctx = this;
 
         edtName = (EditText) findViewById(R.id.edtName);
