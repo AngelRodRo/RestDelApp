@@ -1,5 +1,6 @@
 package com.example.restdeliveryapp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +21,7 @@ import im.delight.android.ddp.MeteorCallback;
 import im.delight.android.ddp.MeteorSingleton;
 import im.delight.android.ddp.ResultListener;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
 
 
     EditText edtEmail;

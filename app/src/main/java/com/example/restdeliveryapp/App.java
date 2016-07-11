@@ -20,7 +20,7 @@ public class App extends Application implements MeteorCallback{
     public void onCreate() {
         super.onCreate();
 
-        MeteorSingleton.createInstance(this, "ws://172.20.20.31:3000/websocket");
+        MeteorSingleton.createInstance(this, "ws://192.168.1.34:3000/websocket",new InMemoryDatabase());
         MeteorSingleton.setLoggingEnabled(true);
         MeteorSingleton.getInstance().addCallback(this);
         MeteorSingleton.getInstance().connect();

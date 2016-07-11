@@ -5,10 +5,10 @@ package com.example.restdeliveryapp.Models;
  */
 public class Dish {
 
-    String name;
-    String image;
-    String type;
-    float price;
-    float score;
+    public String name;
+    public String image;
+    public String type;
+    public float price;
+    public float score;
 
 }
