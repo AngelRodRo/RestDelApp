@@ -2,31 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
-    >
+    android:background="#ffffff"
+    android:layout_gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="273dp"
-        android:orientation="horizontal"
+        android:layout_height="500dp"
+        android:orientation="vertical"
         tools:context="com.example.restdeliveryapp.ProfileOrderActivity">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="163dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_width="fill_parent"
+            android:layout_height="250dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:id="@+id/imageView2"
                 android:src="@drawable/lomosaltado1"
-                android:layout_alignTop="@+id/textView"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignTop="@+id/textView"/>
         </LinearLayout>
 
         <LinearLayout
@@ -42,18 +39,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Plato de comida especial"
+                android:text="Lomo saltado Arequipeño"
+                android:textColor="#E74C3C"
+                android:textSize="30sp"
+                android:textStyle="bold"
                 android:id="@+id/textView"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="47dp" />
+                android:layout_marginTop="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="S/.20.00"
+                android:textSize="28sp"
+                android:textStyle="normal"
                 android:id="@+id/textView2"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp" />
@@ -63,15 +65,17 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Tipo de plato"
+                android:textSize="17sp"
                 android:id="@+id/textView3"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="3dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Cantidad"
+                android:textSize="17sp"
                 android:id="@+id/textView4" />
 
             <NumberPicker
@@ -82,7 +86,7 @@
                 android:layout_alignBottom="@+id/btnMakeOrder"
                 android:layout_alignRight="@+id/btnMakeOrder"
                 android:layout_alignEnd="@+id/btnMakeOrder"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="10dp" />
 
         </LinearLayout>
@@ -92,7 +96,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <Button
             android:layout_width="fill_parent"
@@ -103,6 +107,8 @@
             android:layout_alignRight="@+id/textView"
             android:layout_alignEnd="@+id/textView"
             android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:background="#E74C3C"
             android:layout_marginRight="20dp" />
     </LinearLayout>
 </LinearLayout>
